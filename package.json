@@ -1,21 +1,21 @@
 {
-  "name": "base",
-  "version": "0.1.0",
-  "description": "Template for starting projects with eslint, prettier, and other configs set up.",
+  "name": "@nfalcone/parse-xmlsitemap",
+  "version": "1.0.0",
+  "description": "Parse an XML sitemap",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nickFalcone/base.git"
+    "url": "git+https://github.com/nickFalcone/parse-sitemap.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nickFalcone/base/issues"
+    "url": "https://github.com/nickFalcone/parse-sitemap/issues"
   },
-  "homepage": "https://github.com/nickFalcone/base#readme",
+  "homepage": "https://github.com/nickFalcone/parse-sitemap#readme",
   "devDependencies": {
     "eslint": "^7.18.0",
     "eslint-config-airbnb-base": "^14.2.1",
