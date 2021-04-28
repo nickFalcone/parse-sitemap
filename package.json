@@ -1,6 +1,6 @@
 {
   "name": "@nfalcone/parse-xmlsitemap",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Parse an XML sitemap",
   "main": "index.js",
   "scripts": {
