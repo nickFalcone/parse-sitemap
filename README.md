@@ -12,7 +12,7 @@ Import the `parseXmlSitemap` module directly, or use a module bundler of your ch
 Then, in an async function, `await parseXmlSitemap('./path-to/sitemap.xml')` supplying the path to your sitemap file:
 
 ```js
-import parseXmlSitemap from 'https://unpkg.com/@nfalcone/parse-xmlsitemap@0.2.0/index.js';
+import parseXmlSitemap from 'https://unpkg.com/@nfalcone/parse-xmlsitemap@0.2.0/index.min.js';
 
 (async () => {
   const ul = document.getElementById('sitemapList');
