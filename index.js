@@ -4,6 +4,9 @@
  * @returns {Array} sitemapUrls - An array of URL objects.
  */
 export default async function parseXmlSitemap(sitemapUri) {
+  if (!sitemapUri.includes('.xml')) {
+    console.warn(`Please supply an XML file. Supplied: ${sitemapUri}`);
+  }
   const sitemapUrls = [];
   try {
     await fetch(sitemapUri)
@@ -17,8 +20,14 @@ export default async function parseXmlSitemap(sitemapUri) {
         new window.DOMParser().parseFromString(string, 'text/html')
       )
       .then((data) => {
-        // <loc> is required for valid xml sitemap https://www.sitemaps.org/protocol.html#locdef
-        [...data.querySelectorAll('loc')].forEach((loc) => {
+        const locations = [...data.querySelectorAll('loc')];
+        if (locations.length === 0) {
+          console.warn(
+            `No <loc> present in ${sitemapUri} See: https://www.sitemaps.org/protocol.html#locdef`
+          );
+        }
+        // <loc> is required for a valid xml sitemap https://www.sitemaps.org/protocol.html#locdef
+        locations.forEach((loc) => {
           const url = new URL(loc.textContent);
           sitemapUrls.push(url);
         });
