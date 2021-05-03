@@ -12,7 +12,7 @@ Import the `parseXmlSitemap` module directly, or use a module bundler of your ch
 Then, in an async function, `await parseXmlSitemap('./path-to/sitemap.xml')` supplying the path to your sitemap file:
 
 ```js
-import parseXmlSitemap from 'https://unpkg.com/@nfalcone/parse-xmlsitemap@0.1.0/index.js';
+import parseXmlSitemap from 'https://unpkg.com/@nfalcone/parse-xmlsitemap@0.2.0/index.js';
 
 (async () => {
   const ul = document.getElementById('sitemapList');
@@ -25,7 +25,7 @@ In the example above, `urls` is an array of URL objects. Each URL object contain
 Assuming an `<ul id="sitemapList"></ul>`, we can add list items for our site's URLs:
 
 ```js
-import parseXmlSitemap from 'https://unpkg.com/@nfalcone/parse-xmlsitemap@0.1.0/index.js';
+import parseXmlSitemap from 'https://unpkg.com/@nfalcone/parse-xmlsitemap@0.2.0/index.min.js';
 
 (async () => {
   const ul = document.getElementById('sitemapList');
